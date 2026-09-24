@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Academic homepage of Professor Name" />
+  <title>Professor Name | Academic Homepage</title>
+
+  <style>
+    :root {
+      --bg: #f7f8fa;
+      --card: #ffffff;
+      --text: #1f2937;
+      --muted: #6b7280;
+      --line: #e5e7eb;
+      --accent: #1f4f8a;
+      --accent-light: #eef4fb;
+      --max-width: 980px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+                   "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .container {
+      width: min(92%, var(--max-width));
+      margin: 40px auto;
+    }
+
+    .profile {
+      display: grid;
+      grid-template-columns: 180px 1fr;
+      gap: 32px;
+      align-items: start;
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 32px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
+    }
+
+    /* .photo {
+      width: 180px;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 12px;
+      border: 1px solid var(--line);
+      background: #f1f5f9;
+    } */
+
+    h1, h2 {
+      margin-top: 0;
+    }
+
+    h1 {
+      margin-bottom: 6px;
+      font-size: 2.2rem;
+      line-height: 1.2;
+    }
+
+    .title {
+      font-size: 1.05rem;
+      color: var(--muted);
+      margin-bottom: 16px;
+    }
+
+    .meta {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .meta li {
+      margin: 4px 0;
+    }
+
+    .links {
+      margin-top: 16px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .links a {
+      display: inline-block;
+      padding: 7px 12px;
+      background: var(--accent-light);
+      border-radius: 8px;
+      font-size: 0.95rem;
+    }
+
+    section {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 28px 32px;
+      margin-top: 24px;
+    }
+
+    h2 {
+      font-size: 1.4rem;
+      padding-bottom: 10px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .research-list,
+    .service-list {
+      padding-left: 22px;
+    }
+
+    .pub {
+      margin-bottom: 18px;
+    }
+
+    .pub:last-child {
+      margin-bottom: 0;
+    }
+
+    .pub-title {
+      font-weight: 600;
+    }
+
+    .venue {
+      color: var(--muted);
+    }
+
+    .footer {
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.9rem;
+      padding: 28px 0 10px;
+    }
+
+    @media (max-width: 700px) {
+      .profile {
+        grid-template-columns: 1fr;
+      }
+
+      .photo {
+        width: 150px;
+        height: 190px;
+      }
+
+      .container {
+        margin-top: 20px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="container">
+
+    <!-- =========================
+         Basic Profile
+         ========================= -->
+    <section class="profile">
+      <!--
+        Replace profile.jpg with the teacher's photo.
+        Put the image file in the same directory as index.html.
+      -->
+      <img class="photo" src="profile.jpg" alt="Professor Name" />
+
+      <div>
+        <h1>Professor Name</h1>
+        <div class="title">
+          Professor / Associate Professor / Assistant Professor<br />
+          School of Computer Science, University Name
+        </div>
+
+        <ul class="meta">
+          <li><strong>Affiliation:</strong> University Name</li>
+          <li><strong>Email:</strong> <a href="mailto:name@university.edu">name@university.edu</a></li>
+          <li><strong>Office:</strong> Building / Room, University Name</li>
+        </ul>
+
+        <div class="links">
+          <a href="https://scholar.google.com/" target="_blank" rel="noopener">Google Scholar</a>
+          <a href="https://orcid.org/" target="_blank" rel="noopener">ORCID</a>
+          <a href="https://dblp.org/" target="_blank" rel="noopener">DBLP</a>
+          <a href="https://github.com/" target="_blank" rel="noopener">GitHub</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================
+         About
+         ========================= -->
+    <section>
+      <h2>About Me</h2>
+      <p>
+        I am a Professor at the School of Computer Science, University Name.
+        My research focuses on computer systems and security, with particular
+        interests in hardware security, GPU security, side-channel analysis,
+        cloud computing, and system security.
+      </p>
+
+      <p>
+        I received my Ph.D. degree from University Name. My research has been
+        published in international conferences and journals in computer systems
+        and security.
+      </p>
+    </section>
+
+    <!-- =========================
+         Research Interests
+         ========================= -->
+    <section>
+      <h2>Research Interests</h2>
+      <ul class="research-list">
+        <li>Computer Systems and Security</li>
+        <li>Hardware and Microarchitectural Security</li>
+        <li>GPU Security</li>
+        <li>Side-Channel Attacks and Defenses</li>
+        <li>Cloud and Virtualization Security</li>
+      </ul>
+    </section>
+
+    <!-- =========================
+         Selected Publications
+         Add at least five recent publications
+         if this page is used for TPMS-related purposes.
+         ========================= -->
+    <section>
+      <h2>Selected Publications</h2>
+
+      <div class="pub">
+        <div class="pub-title">
+          [1] Paper Title One
+        </div>
+        <div>
+          Author A, <strong>Professor Name</strong>, Author C
+        </div>
+        <div class="venue">
+          Conference / Journal Name, 2026.
+        </div>
+      </div>
+
+      <div class="pub">
+        <div class="pub-title">
+          [2] Paper Title Two
+        </div>
+        <div>
+          <strong>Professor Name</strong>, Author B, Author C
+        </div>
+        <div class="venue">
+          Conference / Journal Name, 2025.
+        </div>
+      </div>
+
+      <div class="pub">
+        <div class="pub-title">
+          [3] Paper Title Three
+        </div>
+        <div>
+          Author A, Author B, <strong>Professor Name</strong>
+        </div>
+        <div class="venue">
+          Conference / Journal Name, 2025.
+        </div>
+      </div>
+
+      <div class="pub">
+        <div class="pub-title">
+          [4] Paper Title Four
+        </div>
+        <div>
+          <strong>Professor Name</strong>, Author B
+        </div>
+        <div class="venue">
+          Conference / Journal Name, 2024.
+        </div>
+      </div>
+
+      <div class="pub">
+        <div class="pub-title">
+          [5] Paper Title Five
+        </div>
+        <div>
+          Author A, <strong>Professor Name</strong>, Author C
+        </div>
+        <div class="venue">
+          Conference / Journal Name, 2024.
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================
+         Education & Experience
+         ========================= -->
+    <section>
+      <h2>Education & Experience</h2>
+      <ul class="service-list">
+        <li><strong>20XX–Present:</strong> Professor, University Name</li>
+        <li><strong>20XX–20XX:</strong> Associate Professor, University Name</li>
+        <li><strong>20XX:</strong> Ph.D. in Computer Science, University Name</li>
+      </ul>
+    </section>
+
+    <!-- =========================
+         Professional Service
+         ========================= -->
+    <section>
+      <h2>Professional Service</h2>
+      <ul class="service-list">
+        <li>Program Committee Member / Reviewer, Conference Name</li>
+        <li>Reviewer, Journal Name</li>
+        <li>Member, Professional Society</li>
+      </ul>
+    </section>
+
+    <!-- =========================
+         Contact
+         ========================= -->
+    <section>
+      <h2>Contact</h2>
+      <p>
+        <strong>Email:</strong>
+        <a href="mailto:name@university.edu">name@university.edu</a>
+      </p>
+      <p>
+        <strong>Address:</strong>
+        School of Computer Science, University Name, City, Country
+      </p>
+    </section>
+
+    <div class="footer">
+      Last updated: September 2026
+    </div>
+
+  </main>
+</body>
+</html>
